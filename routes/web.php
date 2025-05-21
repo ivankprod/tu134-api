@@ -3,5 +3,5 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-	return 'HOME';
+	return abort(404, 'Not found');
 });
