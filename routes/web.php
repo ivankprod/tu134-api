@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-	return abort(404, 'Not found');
+Route::prefix('api')->group(function () {
+	Route::get('/test', [TestController::class, 'index'])->name('test');
 });
