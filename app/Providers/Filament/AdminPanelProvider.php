@@ -53,6 +53,8 @@ class AdminPanelProvider extends PanelProvider
 			])
 			->authMiddleware([
 				Authenticate::class,
-			]);
+			])
+			->brandName('tu134.ru')
+			->spa();
 	}
 }
